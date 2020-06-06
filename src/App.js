@@ -156,7 +156,6 @@ class App extends Component {
     });
     productsPrice = Number(productsPrice.toFixed(2));
     this.checkDeliveryPrice(productsPrice);
-    console.log(productsPrice);
     this.setState({
       productsPrice,
     });
