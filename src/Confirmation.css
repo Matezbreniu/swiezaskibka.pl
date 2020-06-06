@@ -1,0 +1,58 @@
+.confirmation-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+.confirmation-order {
+  position: absolute;
+  width: 95%;
+  max-width: 600px;
+  top: 50%;
+  left: 50%;
+  background-color: #fff;
+  transform: translate(-50%, -50%);
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+}
+
+.confirmation-order::after {
+  position: absolute;
+  content: '';
+  background: url('/images/confirmation-background.png');
+  opacity: 0.07;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.confirmation-order h3 {
+  text-align: center;
+}
+
+.confirmation-order div {
+  margin: 5px;
+}
+
+.confirmation-order h4 {
+  margin: 25px 5px;
+  text-align: center;
+}
+.confirmation-products {
+  padding: 5px;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+}
+
+.confirmation-paymentMethodDescription {
+  margin: 5px;
+}

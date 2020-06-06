@@ -1,32 +1,199 @@
-.App {
+* {
+  margin: 0;
+}
+
+body {
+  background-image: url('/images/background.jpg');
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+@media (min-width: 760px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+h1,
+h2 {
+  margin: 20px;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.orderForm {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.orderForm label {
+  background-color: #fff;
+  margin: 10px 0px;
+  padding: 30px 20px;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.orderForm input {
+  margin-top: 10px;
+  border: none;
+  border-bottom: 1px solid #dadce0;
+  display: block;
+}
+.orderForm input:focus {
+  outline: none;
+}
+
+#phone::-webkit-outer-spin-button,
+#phone::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#phone[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.deliveryTime {
+  margin: 5px 20px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  margin: 10px 0px;
+  padding: 30px 20px;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+}
+.deliveryTime span {
+  width: 100%;
+}
+
+.deliveryTime label {
+  text-align: center;
+  width: auto;
+  margin: 0px 15px 5px 0;
+  border: none;
+}
+
+#slicedBread {
+  display: inline;
+}
+.orderForm .products {
+  margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #fff;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+}
+.products h3 {
+  width: 100%;
+  text-align: center;
+}
+
+.products .productContainer {
+  width: 45%;
+  text-align: center;
+}
+@media (min-width: 760px) {
+  .products .productContainer {
+    width: 22%;
+  }
+}
+.products label {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: auto;
+}
+
+.products .product img {
+  margin-bottom: 10px;
+  height: 100%;
+  width: 100%;
+}
+
+.products .product button {
+  width: 30%;
+  height: auto;
+}
+.products .product input {
+  width: 20%;
+  text-align: center;
+}
+
+.products .product input::-webkit-outer-spin-button,
+.products .product input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.products .product input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.products .productName {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.paymentMethod {
+  margin: 10px 0px;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100%;
+  background-color: #fff;
+  padding: 30px 20px;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+}
+
+.paymentMethod input {
+  display: inline;
+}
+
+.priceTable {
+  margin: 10px 0px;
+  padding: 30px 20px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+}
+
+.priceTable label {
+  display: block;
+  margin: 5px 0;
+  padding: 0;
+  width: 100%;
+  border: none;
+}
+
+.priceTable input {
+  display: none;
+}
+
+.orderButton {
+  margin: 10px auto;
+  padding: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
   color: white;
+  border-radius: 5px;
+  border: transparent;
+  background-color: #2f8da0;
 }
 
-.App-link {
-  color: #61dafb;
+.orderButton:hover {
+  background-color: #5aabbb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.validationError {
+  display: block;
+  margin-top: 10px;
+  color: red;
 }
